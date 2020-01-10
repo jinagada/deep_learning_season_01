@@ -1,12 +1,13 @@
 import tensorflow.compat.v1 as tf
+import numpy as np
 
-# H(X) = 1 / (1 + e^-(W^T * X))
 tf.disable_v2_behavior()
-x_data = [[1, 2], [2, 3], [3, 1], [4, 3], [5, 3], [6, 2]]
-y_data = [[0], [0], [0], [1], [1], [1]]
-X = tf.placeholder(tf.float32, shape=[None, 2])
+xy = np.loadtxt('data-03-diabetes.csv', delimiter=',', dtype=np.float32)
+x_data = xy[:, 0:-1]
+y_data = xy[:, [-1]]
+X = tf.placeholder(tf.float32, shape=[None, 8])
 Y = tf.placeholder(tf.float32, shape=[None, 1])
-W = tf.Variable(tf.random_normal([2, 1]), name='weight')
+W = tf.Variable(tf.random_normal([8, 1]), name='weight')
 b = tf.Variable(tf.random_normal([1]), name='bias')
 hypothesis = tf.sigmoid(tf.matmul(X, W) + b)
 cost = -tf.reduce_mean(Y * tf.log(hypothesis) + (1 - Y) * tf.log(1 - hypothesis))
