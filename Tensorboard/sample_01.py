@@ -46,6 +46,11 @@ with tf.Session() as sess:
     # tensorflow gpu 설치 : conda install tensorflow-gpu
     # grpcio 설치 : conda install -c tallic grpcio
     # grpcio 버전 업그레이드 : pip install grpcio==1.24.3
+    # CentOS 6006 포트 열기
+    # (airflow) ~$ sudo firewall-cmd --permanent --add-port=6006/tcp
+    # (airflow) ~$ sudo firewall-cmd --reload
+    # (airflow) ~$ sudo firewall-cmd --list-all
+    # (airflow) ~$ sudo systemctl restart firewalld
     merged_summary = tf.summary.merge_all()
     writer = tf.summary.FileWriter("/home/test/logs/xor_logs_r0_01")
     writer.add_graph(sess.graph)  # Show the graph
