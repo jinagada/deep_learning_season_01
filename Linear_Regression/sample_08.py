@@ -1,6 +1,7 @@
 import tensorflow.compat.v1 as tf
 
 tf.disable_v2_behavior()
+tf.set_random_seed(777)
 x_data = [73., 80., 75.], [93., 88., 93.], [89., 91., 90.], [96., 98., 100.], [73., 76., 70.]
 y_data = [[152.], [185.], [180.], [196.], [142.]]
 X = tf.placeholder(tf.float32, shape=[None, 3])

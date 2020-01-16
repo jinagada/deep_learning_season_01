@@ -7,6 +7,7 @@ y_data = xy[:, [-1]]
 print(x_data.shape, x_data, len(x_data))
 print(y_data.shape, y_data)
 tf.disable_v2_behavior()
+tf.set_random_seed(777)
 X = tf.placeholder(tf.float32, shape=[None, 3])
 Y = tf.placeholder(tf.float32, shape=[None, 1])
 W = tf.Variable(tf.random_normal([3, 1]), name='weight')

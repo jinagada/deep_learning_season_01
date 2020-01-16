@@ -1,6 +1,7 @@
 import tensorflow.compat.v1 as tf
 import matplotlib.pyplot as plt
 import random
+
 # Tensorflow 예제가 설치되지 않을경우 git 에서 직접 다운로드 받은 후 해당 파일을 복사하여 설치
 # git clone https://github.com/tensorflow/tensorflow
 # cp -a tensorflow/tensorflow/examples/* anaconda3/envs/test_src/lib/python3.7/site-packages/tensorflow_core/examples/

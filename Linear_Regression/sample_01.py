@@ -1,6 +1,7 @@
 import tensorflow.compat.v1 as tf
 
 tf.disable_v2_behavior()
+tf.set_random_seed(777)
 a = tf.placeholder(tf.float32)
 b = tf.placeholder(tf.float32)
 adder_node = a + b

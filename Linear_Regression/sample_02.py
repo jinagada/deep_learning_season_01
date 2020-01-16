@@ -1,6 +1,7 @@
 import tensorflow.compat.v1 as tf
 
 tf.disable_v2_behavior()
+tf.set_random_seed(777)
 # Linear Hypothesis
 # H(x) = W*x + b
 # Cost : SUM((H(xi) - yi)^2) / m

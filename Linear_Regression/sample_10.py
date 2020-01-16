@@ -1,6 +1,7 @@
 import tensorflow.compat.v1 as tf
 
 tf.disable_v2_behavior()
+tf.set_random_seed(777)
 filename_queue = tf.train.string_input_producer(['data-01-test-score-1.csv'], shuffle=False, name='filename_queue')
 reader = tf.TextLineReader()
 key, value = reader.read(filename_queue)

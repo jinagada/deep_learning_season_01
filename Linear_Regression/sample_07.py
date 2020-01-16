@@ -1,6 +1,7 @@
 import tensorflow.compat.v1 as tf
 
 tf.disable_v2_behavior()
+tf.set_random_seed(777)
 x1_data = [73., 93., 89., 96., 73.]
 x2_data = [80., 88., 91., 98., 66.]
 x3_data = [75., 93., 90., 100., 70.]

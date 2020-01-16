@@ -2,6 +2,7 @@ import tensorflow.compat.v1 as tf
 import numpy as np
 
 tf.disable_v2_behavior()
+tf.set_random_seed(777)
 xy = np.loadtxt('data-04-zoo.csv', delimiter=',', dtype=np.float32)
 x_data = xy[:, 0:-1]
 y_data = xy[:, [-1]]

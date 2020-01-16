@@ -2,6 +2,7 @@ import tensorflow.compat.v1 as tf
 import matplotlib.pyplot as plt
 
 tf.disable_v2_behavior()
+tf.set_random_seed(777)
 X = [1, 2, 3]
 Y = [1, 2, 3]
 W = tf.placeholder(tf.float32)

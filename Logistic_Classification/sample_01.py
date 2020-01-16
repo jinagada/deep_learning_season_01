@@ -2,6 +2,7 @@ import tensorflow.compat.v1 as tf
 
 # H(X) = 1 / (1 + e^-(W^T * X))
 tf.disable_v2_behavior()
+tf.set_random_seed(777)
 x_data = [[1, 2], [2, 3], [3, 1], [4, 3], [5, 3], [6, 2]]
 y_data = [[0], [0], [0], [1], [1], [1]]
 X = tf.placeholder(tf.float32, shape=[None, 2])
