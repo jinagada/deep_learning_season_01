@@ -42,6 +42,10 @@ tf.summary.scalar("accuracy", accuracy)
 # Launch graph
 with tf.Session() as sess:
     # tensorboard --logdir=./logs/xor_logs
+    # tensorboard 실행 시 오류 발생 처리
+    # tensorflow gpu 설치 : conda install tensorflow-gpu
+    # grpcio 설치 : conda install -c tallic grpcio
+    # grpcio 버전 업그레이드 : pip install grpcio==1.24.3
     merged_summary = tf.summary.merge_all()
     writer = tf.summary.FileWriter("/home/test/logs/xor_logs_r0_01")
     writer.add_graph(sess.graph)  # Show the graph
