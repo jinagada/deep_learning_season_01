@@ -41,7 +41,7 @@ tf.summary.scalar("accuracy", accuracy)
 
 # Launch graph
 with tf.Session() as sess:
-    # tensorboard --logdir=./logs/xor_logs
+    # tensorboard --logdir=/home/test/logs --bind_all
     # tensorboard 실행 시 오류 발생 처리
     # tensorflow gpu 설치 : conda install tensorflow-gpu
     # grpcio 설치 : conda install -c tallic grpcio
